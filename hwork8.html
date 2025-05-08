@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD回應式網頁切版</title>
+  <style>
+    .headline {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .list {
+      display: flex; 
+      justify-content: center;
+    }
+
+    .item {
+      background-color: rgb(192, 255, 255);
+      flex: none;
+      width: 280px;
+      margin: 10px;
+    }
+
+    
+    @media only screen and (max-width: 1250px) {
+      .list {
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 45%;
+      }
+    }
+
+    
+    @media only screen and (max-width: 500px) {
+      .item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="headline">𝑴𝒚 𝑭𝒂𝒗𝒐𝒓𝒊𝒕</div>
+
+  <div class="list">
+    <div class="item">𝑴𝒆</div>
+    <div class="item">𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑷𝒍𝒂𝒄𝒆</div>
+    <div class="item">𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑨𝒏𝒊𝒎𝒆</div>
+    <div class="item">𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑭𝒍𝒐𝒘𝒆𝒓</div>
+  </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花卉展示</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    .card {
+      background-color: #1b6b8a;
+      padding: 10px;
+      border-radius: 8px;
+      width: 150px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .box {
+        flex: 1;
+        background-color: #550c5fc5;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+  </style>
+</head>
+<body>
+
+        </div>
+      </div>
+    
+
+  <div class="container">
+    <div class="card">
+      <h3>𝑴𝒆</h3>
+      <img src="https://i.postimg.cc/y8nmV6xd/Whats-App-Image-2025-05-01-at-10-19-48.jpg" alt="Me">
+    </div>
+    <div class="card">
+      <h3>𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑷𝒍𝒂𝒄𝒆</h3>
+      <img src="https://i.pinimg.com/736x/11/cc/2f/11cc2fe1564e6ca3fa39967e22fc4cc4.jpg" alt="My Favorit Place">
+    </div>
+    <div class="card">
+      <h3>𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑨𝒏𝒊𝒎𝒆</h3>
+      <img src="https://cdn.europosters.eu/image/1300/122808.jpg" alt="My Favorit Anime">
+    </div>
+    <div class="card">
+        <h3>𝑭𝒂𝒗𝒐𝒓𝒊𝒕 𝑭𝒍𝒐𝒘𝒆𝒓</h3>
+        <img src="https://img.cdn-pictorem.com/uploads/collection/L/LA4AGA8MHN/900_Thula-Photography_Love%20Rose%20blue%208665.jpg" alt="My Favorit Flower">
+      </div>
+  </div>
+
+</body>
+</html>
