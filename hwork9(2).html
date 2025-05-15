@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>攝氏轉華氏轉換器</title>
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+    input, button {
+      font-size: 1rem;
+      padding: 8px 12px;
+      margin: 10px 0;
+      width: 80%;
+      box-sizing: border-box;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+  <script>
+    
+    function celsiusToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    function convertTemperature() {
+      let celsiusInput = document.getElementById("celsiusInput").value.trim();
+      let celsiusValue = parseFloat(celsiusInput);
+
+      if (isNaN(celsiusValue)) {
+        alert("請輸入有效的攝氏溫度！");
+        return;
+      }
+
+      let fahrenheitResult = celsiusToFahrenheit(celsiusValue);
+      document.getElementById("result").textContent = 
+        ${celsiusValue}°C 相當於 ${fahrenheitResult.toFixed(2)}°F;
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("celsiusInput").addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+          convertTemperature();
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>攝氏轉華氏轉換器</h1>
+  <input type="number" id="celsiusInput" placeholder="請輸入攝氏溫度" />
+  <br />
+  <button onclick="convertTemperature()">轉換</button>
+  <div id="result"></div>
+</body>
+</html>
