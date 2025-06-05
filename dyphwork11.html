@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>practice.html</title>
+</head>
+<body>
+
+  <button onclick="showTotal()">購物車總額</button>
+  <button onclick="clearCart()">清空購物車</button>
+
+  <br><br>
+
+  <img src="https://ho-ja.uk/cdn/shop/files/FullSizeRender_14b9efb5-33f8-4566-aad1-3847156a17fd_1024x1024@2x.jpg?v=1703927553" alt="noodle1" width="200">
+  <p>商品名稱：台湾泡面</p>
+  <p>$100</p>
+  <button onclick="addToCart(100)">加入購物車</button>
+
+  <br><br>
+
+  <img src="https://img.lazcdn.com/g/p/c9463fab0cc912a8f040689896a6d4f3.jpg_720x720q80.jpg" alt="noodle2" width="200">
+  <p>商品名稱：印尼泡面</p>
+  <p>$120</p>
+  <button onclick="addToCart(120)">加入購物車</button>
+
+  <br><br>
+
+  <p>目前購物車金額：<span id="total">0</span> 元</p>
+
+  <script>
+    let total = 0;
+
+    window.onload = () => {
+      const saved = localStorage.getItem("cartTotal");
+      if (saved) {
+        total = parseInt(saved);
+        document.getElementById("total").textContent = total;
+      }
+    };
+
+    function addToCart(price) {
+      total += price;
+      document.getElementById("total").textContent = total;
+      localStorage.setItem("cartTotal", total);
+      console.log("目前總金額：" + total + " 元");
+    }
+
+    function showTotal() {
+      alert("目前購物車總金額為：" + total + " 元");
+    }
+
+    function clearCart() {
+      total = 0;
+      document.getElementById("total").textContent = total;
+      localStorage.removeItem("cartTotal");
+      console.log("購物車已清空");
+    }
+  </script>
+
+</body>
+</html>
